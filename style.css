@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -19,132 +18,93 @@ body {
     padding: 20px;
 }
 
-/* Encabezado */
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: aparecer 1s ease-in;
 }
 
-.titulo-animado {
-    font-size: 2.8rem;
+h1 {
+    font-size: 2.5rem;
     color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    animation: aparecer 1.5s ease-in-out;
 }
 
-.subtitulo {
-    font-size: 1.3rem;
-    color: #7f8c8d;
-    animation: aparecer 2s ease-in-out;
-}
-
-/* Contenido principal */
-.contenido-principal {
+main {
     background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .descripcion {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-.descripcion h2 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    animation: deslizar 1s ease-out;
-}
-
-.descripcion p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Navegación y tarjetas */
 .navegacion {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .tarjeta {
     background: linear-gradient(135deg, #3498db, #2980b9);
-    padding: 30px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 10px;
     text-align: center;
     color: white;
     flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;
+    transition: transform 0.3s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-.tarjeta h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.tarjeta p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-/* Botones */
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, #e74c3c, #c0392b);
     color: white;
-    padding: 14px 28px;
-    border-radius: 50px;
+    padding: 12px 25px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-animado:hover {
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.btn:hover {
+    transform: scale(1.05);
     background: linear-gradient(135deg, #c0392b, #a93226);
 }
 
-/* Tabla */
 .tabla-miembros {
     overflow-x: auto;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: escalar 0.8s ease-out;
+    animation: escalar 0.5s ease-out;
 }
 
 th, td {
-    padding: 18px;
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ecf0f1;
 }
@@ -152,8 +112,6 @@ th, td {
 th {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
 }
 
 tr:nth-child(even) {
@@ -162,134 +120,71 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #e8f4fc;
-    transform: scale(1.02);
-    transition: all 0.2s ease;
 }
 
-/* Galería */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 30px 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 20px 0;
 }
 
 .miembro {
     text-align: center;
     background: white;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .miembro:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
-.imagen-animada {
-    width: 150px;
-    height: 150px;
+.miembro img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3498db;
+    border: 3px solid #3498db;
     margin-bottom: 15px;
     animation: flotar 3s ease-in-out infinite;
 }
 
-.info h3 {
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-size: 1.3rem;
-}
-
-.info p {
+.descripcion-empleado {
     color: #7f8c8d;
-    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 8px;
 }
 
-/* Pie de página */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     background: rgba(44, 62, 80, 0.95);
     color: white;
-    border-radius: 12px;
-    margin-top: 30px;
+    border-radius: 8px;
 }
 
-/* Animaciones */
 @keyframes aparecer {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes deslizar {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes escalar {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 @keyframes flotar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    .titulo-animado {
-        font-size: 2.2rem;
-    }
-    
-    .navegacion {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .tarjeta {
-        min-width: 100%;
-    }
-    
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-    
-    th, td {
-        padding: 12px;
-    }
-    
-    .btn {
-        padding: 12px 24px;
-        font-size: 1rem;
-    }
+    .container { padding: 15px; }
+    h1 { font-size: 2rem; }
+    .navegacion { flex-direction: column; }
+    .tarjeta { min-width: 100%; }
+    .galeria { grid-template-columns: 1fr; }
+    th, td { padding: 10px; }
 }
